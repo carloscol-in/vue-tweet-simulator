@@ -4,10 +4,11 @@
           <span class="navbar-brand">Tweet simulator</span>
 
           <button
-            class="btn btn-success px-4"
+            class="btn px-4"
+            :class="{ 'btn-success': !showForm, 'btn-danger': showForm }"
             @click="openCloseForm"
-            >
-              New Tweet
+          >
+            {{ showForm ? "Cancel Tweet" : "New Tweet" }}
           </button>
       </div>
   </nav>
@@ -15,10 +16,10 @@
 
 <script>
 export default {
-    props: {
-        showForm: Boolean,
-        openCloseForm: Function,
-    }
+  props: {
+    showForm: Boolean,
+    openCloseForm: Function,
+  },
 }
 </script>
 

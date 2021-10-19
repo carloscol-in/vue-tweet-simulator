@@ -1,14 +1,14 @@
-import { ref } from 'vue'
+import { ref, } from 'vue'
 
-export default function useFormTweet() {
-    const showForm = ref(true);
+export default function useFormTweet () {
+  const showForm = ref(false,)
 
-    const openCloseForm = () => {
-        showForm.value = !showForm.value
-    }
+  const openCloseForm = () => {
+    showForm.value = !showForm.value
+  }
 
-    return {
-        showForm,
-        openCloseForm,
-    }
+  return {
+    showForm,
+    openCloseForm,
+  }
 }
