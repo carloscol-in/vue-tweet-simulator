@@ -12,6 +12,8 @@
 
 <script>
 import { ref } from "vue"
+import { saveTweetApi } from "../api/tweet"
+
 export default {
   props: {
     showForm: Boolean,
@@ -22,9 +24,7 @@ export default {
     let tweet = ref("")
 
     const sendTweet = () => {
-      console.log("Sending form")
-      console.log("Username", username.value)
-      console.log("Tweet", tweet.value)
+      saveTweetApi(tweet.value, username.value)
     }
 
     return {
