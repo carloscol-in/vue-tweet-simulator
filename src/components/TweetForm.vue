@@ -11,20 +11,20 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue"
 export default {
   props: {
     showForm: Boolean,
   },
 
   setup() {
-    let username = ref('')
-    let tweet = ref('')
+    let username = ref("")
+    let tweet = ref("")
 
     const sendTweet = () => {
-      console.log('Sending form')
-      console.log('Username', username.value)
-      console.log('Tweet', tweet.value)
+      console.log("Sending form")
+      console.log("Username", username.value)
+      console.log("Tweet", tweet.value)
     }
 
     return {
