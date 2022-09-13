@@ -3,6 +3,8 @@
 
   <TweetForm :showForm="showForm" :reloadTweets="reloadTweets" :openCloseForm="openCloseForm" />
 
+  <p>Hola</p>
+
   <TweetList :tweets="tweets" :reloadTweets="reloadTweets" />
 </template>
 
